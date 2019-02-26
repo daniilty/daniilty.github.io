@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= full_title(yield(:title))%></title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header class="navbar navbar-fixed-top navbar navbar-white">
+      <div class="container">
+        <%= link_to image_tag("daniilty.png", alt: "Logo"),'https://github.com/daniilty', id: "logo" %>
+        <nav>
+          <% if logged_in? %>
+             <div class="dropdown">
+              <li><%= link_to image_tag("myprof.png"), '#' %></li>
+              <div class="dropdown-content">
+                <li><%= link_to image_tag("main.png"), current_user %></li>
+                <li><%= link_to image_tag("settings.png"), '#' %></li>
+                <li><%= link_to image_tag("logout.png"),logout_path, method: "delete"  %></li>
+              </div>
+             </div>
+             <% else %>
+            <li><%= link_to image_tag("sin.png", alt: "Sign in"), '/sessions/new' %></li>
+            <% end %>
+          
+        </nav>
+      </div>
+    </header>
+    <div class="container">
+      <% flash.each do |mtype,m| %>
+        <div class="alert-<%= mtype %>"><%= m %></div>
+        <% end %>
+      <%= yield %>
+    </div>
+  </body>
+</html>

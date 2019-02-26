@@ -1,0 +1,305 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+body {
+	pading-top: 90px;
+}
+section {
+	overflow: auto;
+}
+textarea {
+	resize: vertical;
+}
+.center {
+	text-align: center;
+}
+.center h1 {
+	margin-bottom: 10px
+}
+h1, h2, h3, h4, h5, h6 {
+	line-height: 1;
+}
+h1 {
+	font-size: 3em;
+	letter-spacing: -2px;
+	margin-bottom: 30px;
+}
+h2 {
+	font-size: 1.2em;
+	letter-spacing: -1px;
+	margin-bottom: 30px;
+	text-align: center;
+	font-weight: normal;
+	color: #777;
+}
+p {
+	font-size: 1.7em;
+	line-height: 1.7em;
+}
+
+header img {
+	height: 80px;
+}
+body {
+    height: 125vh;
+    background-color: #fff;
+    background-size: cover;
+    font-family: 'Rubik';
+    font-size: 20px;
+    margin-top: 80px;
+    padding: 30px;
+}
+
+header {
+	background-color: rgba(255,255,255,.7);
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 80px;
+	display: flex;
+	align-items: center;
+}
+header * {
+	display: inline;
+}
+header li {
+	margin: 0px;
+	float: right;
+}
+@mixin box_sizing {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-box-sizing: border-box;
+}
+.debug_dump {
+	clear: both;
+	float: left;
+	width: 100%;
+	margin-top: 50px;
+	@include box_sizing;
+}
+.avacenter {
+	position: relative;
+	top: 200px;
+	text-align: center;
+	margin: 5% auto;
+	padding: 3%;
+}
+.row {
+	margin: 5% auto;
+	position: absolute;
+	top: 0;
+	left: 5%;
+	box-sizing: border-box;
+	padding: 0px;
+	width: 400px;
+	height: 600px;
+}
+.reg {
+	color: #2d2523;
+	position: relative;
+	height: 600px;
+	background-color: #eff5fa;
+	border-radius: 30px;
+	box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+}
+.regimg {
+ background: transparent;
+ background-image: url("register.png");
+ background-size: cover;
+ background-position: center;
+ color: rgba(255,255,255,.0);
+ display: inline-block;
+ border: none;
+ padding: 0px;
+ width: 240px;
+ border-radius: 0px;
+ height: 120px;
+ transition: all 0.5s;
+ cursor: pointer;
+}
+.regimg:hover
+{
+ background: transparent;
+ background-image: url("registerred.png");
+ background-size: cover;
+ background-position: center;
+}
+.right {
+	position: absolute;
+	top: 110px;
+	right: 220px;
+	box-sizing: border-box;
+	box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+	padding: 40px;
+	width: 500px;
+	height: 600px;
+	background-image: url("back2.jpg");
+	background-size: cover;
+	background-position: center;
+	border-radius: 30px;
+}
+input[type="email"],
+input[type="text"],
+input[type="password"]{
+	dispaly: block;
+	box-sizing: border-box;
+	margin-bottom: 10px;
+	color: #352c2f;
+	background-color: rgba(0,0,0,.0);
+	padding: 2px;
+	width: 220px;
+	height: 32px;
+	border: none;
+	border-radius: 10px;
+	outline: none;
+	border-bottom: 0px solid #aaa;
+	font-family: "Rubik";
+	font-size: 20px;
+	transition: 0.1s ease;
+	box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+}
+.err {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	box-sizing: border-box;
+	padding: 40px;
+	width: 500px;
+	height: 600px;
+	background-color: rgba(255, 255, 255, 0.9);
+	border-radius: 29px;
+	font-family: "Rubik";
+	color: #5e2535;
+	font-size: 25px;
+}
+.log1{
+	color: #2d2523;
+	position: relative;
+	height: 600px;
+	background-color: #f5f1ee;
+	border-radius: 30px;
+	box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+	
+}
+.logimg {
+	 background: transparent;
+ 	background-image: url("signin.png");
+ 	background-size: cover;
+ 	background-position: center;
+ 	color: rgba(255,255,255,.0);
+ 	display: inline-block;
+ 	border: none;
+ 	padding: 0px;
+ 	width: 240px;
+ 	border-radius: 0px;
+ 	height: 120px;
+ 	transition: all 0.5s;
+ 	cursor: pointer;
+}
+.logimg:hover {
+ background: transparent;
+ background-image: url("signinred.png");
+ background-size: cover;
+ background-position: center;
+}
+.right1 {
+	position: absolute;
+	top: 110px;
+	right: 220px;
+	box-sizing: border-box;
+	box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+	padding: 40px;
+	width: 500px;
+	height: 600px;
+	background-image: url("back3.jpg");
+	background-size: cover;
+	background-position: center;
+	border-radius: 30px;
+}
+.flash {
+  	position: absolute;
+	top: 0px;
+	right: 0px;
+	box-sizing: border-box;
+	padding: 40px;
+	width: 500px;
+	height: 600px;
+	background-color: rgba(255, 255, 255, 0.8);
+	border-radius: 29px;
+	font-family: "Rubik";
+	color: #5e2535;
+	font-size: 25px;
+}
+.dropdown {
+	float: right;
+  	display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  max-width: 125px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+  border-radius: 15px;
+  transition: all 0.5s;
+
+}
+.dropdown:hover .dropdown-content {
+  top: 60px;
+  right: 18px;
+  display: block;
+  transition: all 0.5s;
+}
+.dropdown-content img {
+	height: 40px;
+}
+.prof {
+	color: #071516;
+	position: relative;
+	height: 600px;
+	background-color: #def1ef;
+	border-radius: 30px;
+	box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+}
+.right3{
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	box-sizing: border-box;
+	box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+	padding: 40px;
+	width: 500px;
+	height: 600px;
+	background-image: url("profilepic.jpg");
+	background-size: cover;
+	background-position: center;
+	border-radius: 29px;
+}
+.row2 {
+	margin: 5% auto;
+	position: absolute;
+	top: 0;
+	left: 5%;
+	box-sizing: border-box;
+	padding: 0px;
+	min-width: 400px;
+	max-width: 1000px;
+	height: 600px;
+}
+.settbutt {
+	display: block;
+	background-image: url("settings1.png");
+	background-size: cover;
+	width: 216px;
+	height: 98px;
+	transition: all 0.5s;
+}
+.settbutt:hover {
+	background-image: url("settings2.png");
+	background-size: cover;
+	width: 216px;
+	height: 98px;
+}
